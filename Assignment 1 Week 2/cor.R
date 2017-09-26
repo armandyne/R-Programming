@@ -2,11 +2,11 @@ corr <- function(directory, threshold = 0) {
      df_nobs <- complete(directory)
      df_nobs <- df_nobs[df_nobs["nobs"]>threshold,]
      
-     if(nrow(df_nobs)==0) {
-          return(vector(mode="numeric", length=0))
-     }
-     
      corr_result <- vector(mode="numeric", length=0)
+     
+     if(nrow(df_nobs)==0) {
+          return(corr_result)
+     }
      
      for(i in df_nobs$id) {
           lpad_current_id <- paste(rep("0",each = 3-nchar(i)), sep = "", collapse = "")
