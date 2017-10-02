@@ -4,9 +4,9 @@ best <- function(state, outcome) {
           stop("invalid outcome")
      }
      
-     oc.colindex <- if(tolower(outcome) == "heart attack"){ 11L }
-                         else if(tolower(outcome) == "heart failure"){ 17L }
-                         else { 23L }
+     oc.colindex <- if(tolower(outcome) == "heart attack") 11L 
+                    else if(tolower(outcome) == "heart failure") 17L 
+                    else 23L 
      
      oc.data <- read.csv("data/outcome-of-care-measures.csv", colClasses = "character")  
      
