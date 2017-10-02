@@ -32,5 +32,5 @@ rankall <- function(outcome, num = "best") {
           ranks.data <- rbind(ranks.data, as.data.frame(state.data))
      }
 
-     ranks.data[order(ranks.data$state),]
+     ranks.data
 }
